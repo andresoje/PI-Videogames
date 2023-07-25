@@ -1,0 +1,92 @@
+.container{
+    max-width: auto;
+    max-height: auto;
+    background-color: rgba(255, 0, 255, 0.2);
+    border-radius: 20px;
+    display: inline-flex;
+    flex-direction: center ;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 10px;
+    margin: 30px;
+    flex-wrap: wrap;
+}
+
+.img{
+    max-width: 500px;
+    max-height: 500px;
+    padding: 5px;
+    border-radius: 20%;
+    border: 10%;
+}
+
+.search{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: white;
+}
+
+.search:hover{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(red, green, blue, alpha);
+    margin: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: violet;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.boton{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(red, green, blue, alpha);
+    margin: 11px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: relative;
+    text-transform: uppercase;
+    color: black;
+}
+
+.boton:hover{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(red, green, blue, alpha);
+    margin: 11px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: relative;
+    color: purple;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+    text-transform: uppercase;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.text{
+    color: purple;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.tittle{
+    position: relative;
+    background-color: rgba(red, green, blue, alpha);
+    border-radius: 100%;
+    padding: 10px;
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: cursive;
+    font-weight: bold;
+    color: purple;
+    text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+}
