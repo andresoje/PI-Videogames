@@ -34,7 +34,7 @@ import {
           videogamesCopy: payload,
         }; 
   
-        case GET_VIDEOGAMES_NAME://    
+        case GET_VIDEOGAMES_NAME:   
         return {
           ...state, 
           videogames: payload,        
@@ -43,9 +43,7 @@ import {
        
   
       case GET_DETAILS:
-        console.log(
-          `se ejecuto en reducer en get details, payload es ${payload}`
-        );
+
         return {
           ...state,
           videogameDetails: payload,
@@ -67,34 +65,33 @@ import {
       case FILTER_GENRE:
           const filterCopy = [...state.videogamesCopy];
           const filterGender = filterCopy.filter(vg => vg.genres.includes(payload))
-          console.log(filterGender)
+
           return{
               ...state, 
               videogames: filterGender
           }   
   
           case FILTER_ORIGEN:   
-          console.log( 'es videogamesCopy') 
-          console.log(state.videogamesCopy)
+
   
               let arrayCopy = [...state.videogamesCopy]; //pongo en el array lo que hay en el state en ese momento
               let filterOrigen =[]
   
               if(payload === "api"){
                  filterOrigen = arrayCopy.filter(vg => !vg.origen)
-                 console.log( 'resultado filter api') 
+
                 
               }
               if(payload === "db"){
-                console.log( 'resultado filter bd') 
+
                  filterOrigen = arrayCopy.filter(vg => vg.origen === "db")
               }
               if(payload === "all"){
-                console.log( 'resultado filter all') 
+
                 filterOrigen = [...state.videogamesCopy]
               } 
               
-              console.log(filterOrigen)
+
               return{
                   ...state, 
                   videogames: filterOrigen    
@@ -142,11 +139,3 @@ import {
   }
   
   
-  /**
-   * case ADD_VIDEOGAME:
-        return {
-          ...state,
-          videogames: [...state.videogames, payload], //agrego el vg creado a vgs y vgsDb
-          videogamesCopy: [...state.videogames, payload],
-        };
-   */

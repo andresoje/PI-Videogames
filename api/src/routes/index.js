@@ -16,6 +16,10 @@ router.get("/", (req,res)=>{//este general funciono ok
     res.status(200).send("probando conexion");
 });
 
+router.post("/", (req,res)=>{
+    res.status(200).send("probando conexion");
+});
+
 router.use('/videogames', videogamesRouter);
 router.use('/videogames/', vgDetallesRouter);
 router.use('/genres', genresRouter);

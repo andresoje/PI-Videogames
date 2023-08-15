@@ -5,14 +5,14 @@ module.exports = (sequelize) => {
   // defino el modelo
   sequelize.define('Videogame', {
     id: {
-      type: DataTypes.UUID, // Genera IDs unicos lo que hace que lo diferencia de los a la API
-      defaultValue: DataTypes.UUIDV4, // nos dara por defecto un valor unico y el V4 es en la version 4 de node
+      type: DataTypes.INTEGER, //el tipo de dato es una string
       allowNull: false, // Con esto no se aceptan valores en null, es decir que esta casilla no podra estar vacia
-      primaryKey: true // Se tomara el ID como llave primaria
+      autoIncrement: true,
+      primaryKey: true, // Se tomara el ID como llave primaria
     },
 
     name: {
-      type: DataTypes.STRING, //el tipo de dato es una string
+      type: DataTypes.STRING, 
       allowNull: false,
     },
 

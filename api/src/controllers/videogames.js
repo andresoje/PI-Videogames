@@ -10,7 +10,7 @@ const getVideogamesFromApi = async (name) => { //Creamos una funcion asincronica
         let apiData = [];
         let arrayApi = [];
         let videogamesApi = [];
-        let cant = 0
+
 
         if (name) { // Si tenemos un nombre entonces hacemos un llamado a la API para traer el juego por el nombre
             apiData = await axios(
@@ -67,7 +67,7 @@ const getVideogamesFromApi = async (name) => { //Creamos una funcion asincronica
               }
             }
         
-            cant = 59
+
             return videogamesApi;
 
     } catch (error) {

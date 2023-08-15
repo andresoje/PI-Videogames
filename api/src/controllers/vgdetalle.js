@@ -14,12 +14,11 @@ router.get("/:id", async(req,res)=>{//idVideogame
     if(id){
         if(isNumeric(id)){
 
-         let apiData
          let copyVideogame = {};
 
          if(creado === "false"){
 
-            apiData = await axios(`${URL_BASE}games/${id}?key=${API_KEY}`)
+           const apiData = await axios(`${URL_BASE}games/${id}?key=${API_KEY}`)
             const videogame = apiData.data;  
                
              //hago esto para tomar solo las propiedades que me interesan de la data
@@ -33,17 +32,6 @@ router.get("/:id", async(req,res)=>{//idVideogame
               copyVideogame.genres = videogame.genres.map((g) => g.name).join(' - ');
          }
          else {
- //const bdData =  await Videogame.findByPk(idVideogame);
- /* copyVideogame = await Videogame.findOne({
-     //este funciona con un [] de generos
-     where: { id },
-     include: {
-         model: Genre,
-         through: {
-             attributes: [],
-            },
-        },
-    }); */
     
     copyVideogame =  await Videogame.findByPk(id); 
          }       

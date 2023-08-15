@@ -39,6 +39,7 @@ export const addVideogame = (obj) => async (dispatch) => {
       background_image,
       platforms,
       genres,
+      origen,
     } = obj;
     if (
       !name |
